@@ -1,11 +1,11 @@
-import {Button, TomatoButton} from "./components/Button"
+import Button from "./components/Button"
+import ProductCard from "./components/ProductCard"
 
 function App() {
 
   return (
     <div>
-      <Button>Click me!</Button>
-      <TomatoButton>Click meee!</TomatoButton>
+      <ProductCard></ProductCard>
     </div>
   )
 }
