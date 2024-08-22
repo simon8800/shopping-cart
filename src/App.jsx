@@ -1,9 +1,12 @@
-import { useState } from 'react'
+import {Button, TomatoButton} from "./components/Button"
 
 function App() {
 
   return (
-    <h1>Hello from App!</h1>
+    <div>
+      <Button>Click me!</Button>
+      <TomatoButton>Click meee!</TomatoButton>
+    </div>
   )
 }
 
