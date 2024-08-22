@@ -30,6 +30,8 @@
     4. Title
     5. Home - Display some nice pictures, have a float button that navigates to Shop
     6. NavBar
+3. Set up routing
+4. Make it responsive
 
 ## APIs and other tech used
 

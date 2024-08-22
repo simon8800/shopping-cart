@@ -1,11 +1,12 @@
-import Button from "./components/Button"
-import ProductCard from "./components/ProductCard"
+import { useState } from 'react';
+import Shop from "./pages/Shop"
 
 function App() {
+  const [cart, setCart] = useState([]);
 
   return (
     <div>
-      <ProductCard></ProductCard>
+      <Shop />
     </div>
   )
 }

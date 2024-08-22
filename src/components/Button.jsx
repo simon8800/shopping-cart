@@ -46,7 +46,6 @@ const buttonStyles = {
 };
 
 const Button = styled.button`
-  display: inline-block;
   color: ${props => (props.$variation ? buttonStyles[props.$variation].color: buttonStyles.default.color)};;
   background: ${props => (props.$variation ? buttonStyles[props.$variation].background: buttonStyles.default.background)};
   font-size: 1em;

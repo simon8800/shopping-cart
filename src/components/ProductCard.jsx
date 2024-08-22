@@ -1,16 +1,35 @@
+import { useState } from 'react';
 import styled from "styled-components";
 import Button from "./Button";
 
-const ProductCard = () => {
+const StyledCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 0 auto;
+  
+  width: 150px;
+  border: 1px solid black;
+  padding: 5px;
+`
+
+const StyledImg = styled.img`
+  height: 100px;
+  width: 100px;
+`
+
+const ProductCard = ({product}) => {
   return (
-    <div className="card">
-      <img className="card-img" src="https://placehold.co/100" alt="" />
-      <h3>Product Name</h3>
-      <p>Product Description</p>
-      <label htmlFor="quantity">Quantity: </label>
-      <input type="number" name="quantity" id="quantity" value="1" min="1"/>
+    <StyledCard>
+      <StyledImg src={product.image} alt="" />
+      <div className="container">
+        <h4 className="card-title">{product.title}</h4>
+        <p>${product.price}</p>
+        <p>⭐️{product.rating.rate} ({product.rating.count})</p>
+      </div>
       <Button>Add to cart</Button>
-    </div>
+    </StyledCard>
   )
 }
 
