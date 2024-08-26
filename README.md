@@ -2,15 +2,21 @@
 
 ## Deliverables
 
-- [ ] Two pages: a home page and a shop page (which includes shopping cart)
-- [ ] Nav bar to go between home and shop pages
+- Two pages: a home page and a shop page (which includes shopping cart)
+    - ✅ Shop Page
+        - ✅ Displays products
+        - ✅ Basic loading
+    - [ ] Home Page
+- ✅ Nav bar to go between home and shop pages
+    - ✅ NavBar
+    - ✅ Routing works
 - [ ] Create item cards which allows users to modify how many and to add the items to the cart
 
 ## Plan of action
 
-1. Brainstorm components to create and plan out pages
-    1. Pages
-        1. Home
+1. Brainstorm components to create and plan out pages 
+    1. Pages 
+        1. Home 
         2. Shop
             1. Fetches 10 products
             2. Creates 10 ProductCards

@@ -1,35 +1,87 @@
 import { useState } from 'react';
 import styled from "styled-components";
 import Button from "./Button";
+import { useOutletContext } from 'react-router-dom';
 
-const StyledCard = styled.div`
+const cardWidth = '300px';
+
+const Card = styled.div`
+  width: ${cardWidth};
+  border: 2px solid black;
+  padding: 5px;
+  margin-bottom: 10px;
+`
+
+const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  flex: 0 0 auto;
-  
-  width: 150px;
-  border: 1px solid black;
-  padding: 5px;
+  width: ${cardWidth};
+  height: ${cardWidth};
+  margin-bottom: 10px;
 `
 
-const StyledImg = styled.img`
-  height: 100px;
-  width: 100px;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: ${cardWidth};
+  height: 200px;
 `
+
+const CardImage = styled.img`
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+`
+
+const ProductTitleContainer = styled.div`
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: ${cardWidth};
+  height: 2.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`
+
+const ProductDetailsContainer = styled.div`
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  width: ${cardWidth};
+  height: 4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`
+
 
 const ProductCard = ({product}) => {
+  const { cartState } = useOutletContext();
+  const [cart, setCart] = cartState;
+
+  const handleClick = () => {
+    setCart([...cart, product])
+  }
+
   return (
-    <StyledCard>
-      <StyledImg src={product.image} alt="" />
-      <div className="container">
+    <Card>
+      <ImageContainer>
+        <CardImage src={product.image} alt="" />
+      </ImageContainer>
+      <Container>
+        <div>
+        <ProductTitleContainer>
         <h4 className="card-title">{product.title}</h4>
+        </ProductTitleContainer>
+        <ProductDetailsContainer>
+          <p>{product.description}</p>
+        </ProductDetailsContainer>
         <p>${product.price}</p>
-        <p>⭐️{product.rating.rate} ({product.rating.count})</p>
-      </div>
-      <Button>Add to cart</Button>
-    </StyledCard>
+        </div>
+        <Button onClick={handleClick}>Add to cart</Button>
+      </Container>
+    </Card>
   )
 }
 
