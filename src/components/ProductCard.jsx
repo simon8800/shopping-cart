@@ -9,7 +9,7 @@ const Card = styled.div`
   width: ${cardWidth};
   border: 2px solid black;
   padding: 5px;
-  margin-bottom: 10px;
+  background-color: white;
 `
 
 const ImageContainer = styled.div`
@@ -27,6 +27,7 @@ const Container = styled.div`
   justify-content: space-between;
   width: ${cardWidth};
   height: 200px;
+  align-items: center;
 `
 
 const CardImage = styled.img`

@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 const buttonStyles = {
   default: {
-    background: '#9764c7',
+    background: '#3498DB',
     color: '#ffffff',
-    border: '#9764c7',
-    hoverBackground: '#7646A6',
-    hoverBorder: '#7646A6',
+    border: '#3498DB',
+    hoverBackground: '#2591d9',
+    hoverBorder: '#2591d9',
   },
   primary: {
     background: '#007bff',
