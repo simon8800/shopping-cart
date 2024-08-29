@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import scrollToTop from '../utils/scrollToTop';
 import DisplayCase from "../components/DisplayCase";
 
 const fakeStoreURL = "https://fakestoreapi.com/products?limit=15";
@@ -9,6 +10,7 @@ const Shop = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    scrollToTop();
     const controller = new AbortController();
 
     const fetchProductData = async () => {

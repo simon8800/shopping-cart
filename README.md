@@ -43,3 +43,11 @@
 
 - [styled-components](https://styled-components.com/)
 - [Fake Store API](https://fakestoreapi.com/)
+
+## Credit
+
+- Images by 
+    - [Alexander Grey](https://unsplash.com/@sharonmccutcheon)
+    - [Baily Alexander](https://unsplash.com/@baileyal3xander)
+    - [Force Majeure](https://unsplash.com/@forcemajeure)
+

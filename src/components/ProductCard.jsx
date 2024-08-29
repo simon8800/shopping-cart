@@ -7,8 +7,8 @@ const cardWidth = '300px';
 
 const Card = styled.div`
   width: ${cardWidth};
-  border: 2px solid black;
-  padding: 5px;
+  border: 1px solid white;
+  padding: 8px;
   background-color: white;
 `
 
@@ -84,6 +84,10 @@ const ProductCard = ({product}) => {
       </Container>
     </Card>
   )
+}
+
+function addToCart(newItem) {
+  cart.find(item => item.id === newItem.id)
 }
 
 export default ProductCard;

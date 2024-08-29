@@ -8,7 +8,9 @@ const StyledFooter = styled.footer`
   align-items: center;
   background-color: #34495E;
   color: #BDC3C7;
-  padding: 1em;
+  padding: 1em 0;
+  position: absolute;
+  width: 100%;
 
   @media only screen and ${devices.md} {
     flex-direction: column;
@@ -42,7 +44,7 @@ const Footer = () => {
           <Link>Store Locator</Link>
         </li>
         <li>
-          <Link>FAQs</Link>
+          <Link to="faqs">FAQs</Link>
         </li>
         </ul>
       </div>

@@ -5,7 +5,9 @@ function ErrorPage () {
   const error = useRouteError();
   console.log(error);
   return (
-    <div><h1>We got nothing yet</h1></div>
+    <div>
+      <h1>This page doesn't exist yet!</h1>
+    </div>
   )
 }
 

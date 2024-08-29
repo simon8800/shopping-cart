@@ -72,7 +72,7 @@ const NavBar = ({cart}) => {
           <NavLink to="cart">
             Cart
             <CartCounterContainer>
-              <i class="fa-solid fa-cart-shopping fa-sm"></i>
+              <i className="fa-solid fa-cart-shopping fa-sm"></i>
               <CartCounter>{cartCounter}</CartCounter>
             </CartCounterContainer>
           </NavLink>

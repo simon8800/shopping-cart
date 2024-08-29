@@ -1,6 +1,7 @@
-import { useOutletContext } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import styled from "styled-components";
+import scrollToTop from "../utils/scrollToTop";
 import twoImage from '../assets/force-majeure-00tlC0Clfrs-unsplash.jpg'
 import benchImage from '../assets/alexander-grey-Q5peAduZISs-unsplash.jpg'
 import hatImage from '../assets/bailey-alexander-pAYZOHbeZzM-unsplash.jpg'
@@ -20,6 +21,11 @@ const StyledImg = styled.img`
 `
 
 const Home = () => {
+
+  useEffect(() => {
+    scrollToTop();
+  }, [])
+  
   return (
     <FlexColumn>
       <Link to="shop">
