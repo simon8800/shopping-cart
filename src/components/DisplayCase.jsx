@@ -4,7 +4,7 @@ import devices from "../utils/devices.js"
 
 const StyledWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(6, auto);
+  grid-template-columns: repeat(4, auto);
   justify-content: space-between;
   padding: 20px;
   gap: 25px;

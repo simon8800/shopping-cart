@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from "styled-components";
-import Button from "./Button";
+import Button from "./Basic/Button";
 import { useOutletContext } from 'react-router-dom';
 
 const cardWidth = '300px';

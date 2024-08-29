@@ -1,8 +1,8 @@
-import RootLayout from "./pages/RootLayout";
+import App from "./App";
 import Home from "./pages/Home"
 import ErrorPage from "./pages/ErrorPage";
 import Shop from "./pages/Shop";
-import ShoppingCart from "./pages/ShoppingCart";
+import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 import Faqs from "./pages/Faqs";
 
 // children require a path and an element
@@ -10,7 +10,7 @@ import Faqs from "./pages/Faqs";
 
 const routes =  [{
   path: "/",
-  element: <RootLayout />,
+  element: <App />,
   errorElement: <ErrorPage />,
   children: [
     {

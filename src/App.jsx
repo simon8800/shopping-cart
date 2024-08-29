@@ -1,11 +1,24 @@
-import { createBrowserRouter, RouterProvider} from 'react-router-dom';
-import routes from './routes';
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
+import styled from "styled-components";
 
-const router = createBrowserRouter(routes)
+const PageWrapper = styled.div`
+  background-color: white;
+`
 
 function App() {
+  const [count, setCount] = useState(0);
+  const [cart, setCart] = useState([]);
+
   return (
-    <RouterProvider router={router} />
+    <div>
+      <PageWrapper>
+        <Outlet context={{
+          countState: [count, setCount],
+          cartState: [cart, setCart]
+        }}/>
+      </PageWrapper>
+    </div>
   )
 }
 
