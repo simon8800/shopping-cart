@@ -5,8 +5,8 @@ const StyledProductTile = styled.div`
   font-family: Helvetica;
   max-width: 400px;
   max-height: 200px;
-  border: 1px solid black;
   padding-right: 10px;
+  border: 1px solid black;
 
   & h3 {
     font-weight: normal;
@@ -39,8 +39,8 @@ const FlexContainer = styled.div`
 `
 
 const ImageWrapper = styled.div`
-  width: 150px;
-  height: 200px;
+  width: 30%;
+  height: 100%;
   margin-right: 8px;
 `
 

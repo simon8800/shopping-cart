@@ -22,6 +22,11 @@ const FlexContainer = styled.div`
   &.push-left {
     align-items: flex-start;
   }
+
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
 `
 
-return { FlexContainer };
+export { FlexContainer };

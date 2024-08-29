@@ -2,6 +2,20 @@
 
 ## Deliverables
 
+### Second draft
+
+- [ ] Reorganize components so each has their own styling
+    - ✅ Basic styles
+    - [ ] Individual component folders
+    - [ ] Page folders
+- [ ] Comments on imports
+- [ ] Page displays
+    - [ ] App displays Nav, Outlet, Footer
+    - [ ] Shop displays products from FakeStoreAPI
+    - [ ] Nav has Home, Shop, Cart, and Company Logo
+- [ ] Each pages functionality works
+
+### First draft
 - Two pages: a home page and a shop page (which includes shopping cart)
     - ✅ Shop Page
         - ✅ Displays products
