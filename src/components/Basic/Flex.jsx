@@ -27,6 +27,11 @@ const FlexContainer = styled.div`
     justify-content: center;
     align-items: center;
   }
+
+  &.fit {
+    height: 100%;
+    width: 100%;
+  }
 `
 
 export { FlexContainer };
