@@ -1,6 +1,6 @@
-import ProductCard from "./ProductCard";
+import ProductCard from "../ProductCard/ProductCard.jsx";
 import styled from "styled-components";
-import devices from "../utils/devices.js"
+import devices from "../../utils/devices.js"
 
 const StyledWrapper = styled.div`
   display: grid;
@@ -29,12 +29,12 @@ const StyledWrapper = styled.div`
   }
 `
 
-const DisplayCase = ({products}) => {
+const ProductCase = ({products}) => {
   return(
-    <StyledWrapper>
-      {products ? (products.map(product => (<ProductCard key={product.id} product={product} />))) : (<p>Loading...</p>) }
-    </StyledWrapper>
+    <div>
+      {products ? (<ProductCard product={products[0]}/>) : (<p>Loading...</p>) }
+    </div>
   )
 }
 
-export default DisplayCase;
+export default ProductCase;

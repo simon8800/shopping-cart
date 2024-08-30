@@ -22,8 +22,12 @@ const ShoppingCart = () => {
     <div>
       <h1>Shopping Cart</h1>
       <FlexContainer className="col center">
-          {/* {Array.from(Array(5)).map((ele, idx) => {return(<ProductTile key={idx}/>);})} */}
-          <ProductTile/>
+          {/* {cart.length > 0 ? (
+            cart.map(item => <ProductTile key={item.id} product={item}/>)
+          ) : (
+            <p>Your cart is empty</p>
+          )} */}
+          <ProductTile />
       </FlexContainer>
     </div>
   );

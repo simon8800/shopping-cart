@@ -6,7 +6,6 @@ const StyledProductTile = styled.div`
   max-width: 400px;
   max-height: 200px;
   padding-right: 10px;
-  border: 1px solid black;
 
   & h3 {
     font-weight: normal;
@@ -35,6 +34,10 @@ const FlexContainer = styled.div`
 
   &.push-left {
     align-items: flex-start;
+  }
+
+  &.gap5 {
+    gap: 5px;
   }
 `
 

@@ -6,8 +6,8 @@ import { FlexContainer } from "../Flex";
 import { ButtonContainer, Count, StyledButton } from "./PillButtonStyles";
 import { MinusSignIcon, Add01Icon } from "hugeicons-react";
 
-const PillButton = ({ handleDecrease, handleIncrease, value }) => {
-  const [count, setCount] = useState(value || 1);
+const PillButton = ({ handleDecrease, handleIncrease, quantity }) => {
+  const [count, setCount] = useState(1);
 
   const defaultHandleDecrease = () => {
     if (count > 1) {
@@ -27,7 +27,9 @@ const PillButton = ({ handleDecrease, handleIncrease, value }) => {
         <StyledButton onClick={handleDecrease || defaultHandleDecrease}>
           <MinusSignIcon size={20} color={"#000000"} variant={"stroke"} />
         </StyledButton>
-        <Count>{count}</Count>
+        <Count>
+          {quantity || count}
+        </Count>
         <StyledButton onClick={handleIncrease || defaultHandleIncrease}>
           <Add01Icon size={20} color={"#000000"} variant={"stroke"} />
         </StyledButton>

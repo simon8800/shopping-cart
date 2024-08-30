@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import scrollToTop from '../utils/scrollToTop';
-import DisplayCase from "../components/DisplayCase";
+import ProductCase from "../components/ProductCase/ProductCase";
 
 const fakeStoreURL = "https://fakestoreapi.com/products?limit=15";
 
@@ -48,7 +48,7 @@ const Shop = () => {
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <DisplayCase products={products}></DisplayCase>
+        <ProductCase products={products}></ProductCase>
       )}
     </div>
   );

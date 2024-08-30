@@ -15,6 +15,7 @@ const Count = styled.div`
   height: 44px;
   overflow: hidden;
   align-items: center;
+  font-size: 13px;
 `;
 
 const StyledButton = styled.button`
