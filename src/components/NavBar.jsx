@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { ShoppingCart02Icon } from '@hugeicons/react-pro';
 
 const Flex = styled.div`
   display: flex;
@@ -72,7 +73,7 @@ const NavBar = ({cart}) => {
           <NavLink to="cart">
             Cart
             <CartCounterContainer>
-              <i className="fa-solid fa-cart-shopping fa-sm"></i>
+              <ShoppingCart02Icon/>
               <CartCounter>{cartCounter}</CartCounter>
             </CartCounterContainer>
           </NavLink>

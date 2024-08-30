@@ -1,5 +1,8 @@
+// modules
 import { useState } from "react";
+// style components
 import { StyledProductTile, FlexContainer, ImageWrapper, ProductImage, RemoveButton } from "./ProductTileStyles";
+import PillButton from "../Basic/PillButton";
 
 const ProductTile = ({
   product = {
@@ -14,10 +17,6 @@ const ProductTile = ({
   const {id, title, price, image} = product;
   const subtotal = calculateSubtotal(price, quantity);
 
-  const handleChange = (e) => {
-    setQuantity(e.target.value);
-  }
-
   return (
     <StyledProductTile>
       <FlexContainer>
@@ -28,18 +27,8 @@ const ProductTile = ({
           <h3>{title}</h3>
           <p>${price.toFixed(2)}</p>
           <FlexContainer className="col push-left squish">
-            <FlexContainer>
-              <p>Quantity: </p>
-              <input 
-                type="number" 
-                name="" id="" 
-                value={quantity} 
-                min="1" 
-                max="10"
-                onChange={handleChange}
-              />
-            </FlexContainer>
-          <RemoveButton>Remove</RemoveButton>
+            <PillButton/>
+            <RemoveButton>Remove</RemoveButton>
           </FlexContainer>
           <p>Subtotal: ${subtotal}</p>
         </FlexContainer>
