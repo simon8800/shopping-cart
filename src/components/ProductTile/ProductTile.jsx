@@ -2,7 +2,7 @@
 import { useState } from "react";
 // style components
 import { StyledProductTile, FlexContainer, ImageWrapper, ProductImage, RemoveButton } from "./ProductTileStyles";
-import PillButton from "../Basic/PillButton";
+import PillButton from "../Basic/PillButton/PillButton";
 
 const ProductTile = ({
   product = {
