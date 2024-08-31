@@ -5,18 +5,16 @@ import styled from "styled-components";
 const CardWidth = "294px";
 
 const ProductCardContainer = styled.div`
+  display: inline-block;
+  max-width: ${CardWidth};
   outline: 1px solid black;
   background-color: #FFFFFF;
-  max-width: ${CardWidth};
 `
 
 const ImageWrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: ${CardWidth};
+  max-width: ${CardWidth};
   height: 392px;
-  margin-bottom: 10px;
   outline: 1px solid black;
 `
 
@@ -26,15 +24,14 @@ const CardImage = styled.img`
   object-fit: contain;
 `
 
-// const ProductTitleContainer = styled.div`
-//   display: -webkit-box;
-//   -webkit-line-clamp: 2;
-//   -webkit-box-orient: vertical;
-//   width: ${cardWidth};
-//   height: 2.8rem;
-//   overflow: hidden;
-//   text-overflow: ellipsis;
-// `
+const ProductTitleWrapper = styled.div`
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: 2.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`
 
 // const ProductDetailsContainer = styled.div`
 //   display: -webkit-box;
@@ -46,4 +43,4 @@ const CardImage = styled.img`
 //   text-overflow: ellipsis;
 // `
 
-export { ProductCardContainer, ImageWrapper, CardImage };
+export { ProductCardContainer, ImageWrapper, CardImage, ProductTitleWrapper };

@@ -32,6 +32,24 @@ const FlexContainer = styled.div`
     height: 100%;
     width: 100%;
   }
+
+  &.gap-sm {
+    gap: 5px;
+  }
+  &.gap-md {
+    gap: 10px;
+  }
+  &.gap-lg {
+    gap: 20px;
+  }
+  &.gap-xl {
+    gap: 25px;
+  }
+  &.gap-2xl {
+    gap: 40px;
+  }
+  
+
 `
 
 export { FlexContainer };

@@ -2,7 +2,8 @@
 import { useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 // style components
-import { ProductCardContainer, ImageWrapper, CardImage} from "./ProductCardStyles"
+import { FlexContainer } from '../Basic/Flex';
+import { ProductCardContainer, ImageWrapper, CardImage, ProductTitleWrapper} from "./ProductCardStyles"
 import Button from "../Basic/Button";
 
 const ProductCard = ({product}) => {
@@ -10,14 +11,17 @@ const ProductCard = ({product}) => {
 
   return (
     <ProductCardContainer>
-      <ImageWrapper>
-        <CardImage src={product.image}></CardImage>
-      </ImageWrapper>
-      <h3>{product.title}</h3>
-      <p>{product.price}</p>
-      <p>⭐️{product.rating.rate} {product.rating.count}</p>
-      <h4>hILLLOO</h4>
-      <Button>Add to cart</Button>
+      <FlexContainer className="col gap-md">
+        <ImageWrapper>
+          <CardImage src={product.image}></CardImage>
+        </ImageWrapper>
+        <ProductTitleWrapper>
+          <h3 style={{fontSize: "17px", fontWeight: "400"}}>{product.title}</h3>
+        </ProductTitleWrapper>
+        <p>{product.price}</p>
+        <p>⭐️{product.rating.rate} {product.rating.count}</p>
+        <Button>Add to cart</Button>
+      </FlexContainer>
     </ProductCardContainer>
   )
 }
