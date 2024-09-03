@@ -3,37 +3,32 @@ import { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 // style components
 import { StyledProductTile, FlexContainer, ImageWrapper, ProductImage, RemoveButton } from "./ProductTileStyles";
-import PillButton from "../Basic/PillButton/PillButton";
+import PillCounter from "../Basic/PillButton/PillCounter";
 
-const ProductTile = ({
-  product = {
-    image: "https://placehold.co/400x600",
-    title: "Generic product title",
-    price: 3.50,
-    description: "Generic product description",
-    quantity: 4
-  },
-}) => {
+const ProductTile = ({product}) => {
   const [quantity, setQuantity] = useState(product.quantity);
-  const { cartState: {cart, setCart} } = useOutletContext();
+  const { addToCart, removeFromCart, cartState: [cart, setCart] } = useOutletContext();
   const {id, title, price, image} = product;
   const subtotal = calculateSubtotal(price, quantity);
 
   const handleIncrease = () => {
     if (quantity < 10) {
       setQuantity(quantity + 1);
+      addToCart(product);
     }
+
   }
 
   const handleDecrease = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
+      removeFromCart(product);
     }
   }
 
   const handleRemove = () => {
     const newCart = cart.filter(item => item.id !== id);
-    setCart([...newCart]);
+    setCart(newCart);
   }
 
   return (
@@ -48,7 +43,7 @@ const ProductTile = ({
           <h3 style={{fontSize: "17px"}}>{title}</h3>
           <p style={{fontSize: "20px"}}>${price.toFixed(2)}</p>
           <FlexContainer className="col push-left squish gap5">
-            <PillButton 
+            <PillCounter 
               handleIncrease={handleIncrease}
               handleDecrease={handleDecrease}
               quantity={quantity}

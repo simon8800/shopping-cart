@@ -1,10 +1,9 @@
 import styled from "styled-components"
 
 const StyledProductTile = styled.div`
-  display: inline-block;
   font-family: Helvetica;
-  max-width: 400px;
-  max-height: 200px;
+  width: 400px;
+  height: 200px;
   padding-right: 10px;
 
   & h3 {
@@ -42,9 +41,8 @@ const FlexContainer = styled.div`
 `
 
 const ImageWrapper = styled.div`
-  width: 30%;
-  height: 100%;
-  margin-right: 8px;
+  width: 100px;
+  flex-shrink: 0;
 `
 
 const ProductImage = styled.img`

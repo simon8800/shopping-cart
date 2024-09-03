@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { ShoppingCart02Icon } from '@hugeicons/react-pro';
+import { ShoppingCart02Icon } from 'hugeicons-react';
 
 const Flex = styled.div`
   display: flex;
@@ -57,8 +57,8 @@ const CartCounter = styled.div`
   `
 
 const NavBar = ({cart}) => {
-  const cartCounter = cart.length
-  
+  const cartCounter = cartQuantity(cart);
+
   return (
     <StyledNavBar>
       <NavList>
@@ -67,7 +67,7 @@ const NavBar = ({cart}) => {
           <li><NavLink to="shop">Shop</NavLink></li>
         </Flex>
         <li>
-          <TitleLink to="/"><h1>Stylin'</h1></TitleLink>
+          <TitleLink to="/"><h1>Uniglo</h1></TitleLink>
         </li>
         <li>
           <NavLink to="cart">
@@ -81,6 +81,14 @@ const NavBar = ({cart}) => {
       </NavList>
     </StyledNavBar>
   )
+}
+
+function cartQuantity(cart) {
+  let counter = 0;
+  for (let item of cart) {
+    counter += item.quantity;
+  }
+  return counter;
 }
 
 export default NavBar;

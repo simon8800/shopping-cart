@@ -1,41 +1,12 @@
-// modules
 import styled from "styled-components";
-import { useState } from "react";
-// style components
-import { FlexContainer } from "../Flex";
-import { ButtonContainer, Count, StyledButton } from "./PillButtonStyles";
-import { MinusSignIcon, Add01Icon } from "hugeicons-react";
 
-const PillButton = ({ handleDecrease, handleIncrease, quantity }) => {
-  const [count, setCount] = useState(1);
-
-  const defaultHandleDecrease = () => {
-    if (count > 1) {
-      setCount(count - 1);
-    }
-  };
-
-  const defaultHandleIncrease = () => {
-    if (count < 10) {
-      setCount(count + 1);
-    }
-  };
-
-  return (
-    <ButtonContainer>
-      <FlexContainer className="space-btwn">
-        <StyledButton onClick={handleDecrease || defaultHandleDecrease}>
-          <MinusSignIcon size={20} color={"#000000"} variant={"stroke"} />
-        </StyledButton>
-        <Count>
-          {quantity || count}
-        </Count>
-        <StyledButton onClick={handleIncrease || defaultHandleIncrease}>
-          <Add01Icon size={20} color={"#000000"} variant={"stroke"} />
-        </StyledButton>
-      </FlexContainer>
-    </ButtonContainer>
-  );
-};
+const PillButton = styled.button`
+  border: none;
+  height: 40px;
+  color: white;
+  border-radius: 50px;
+  background-color: black;
+  cursor: pointer;
+`
 
 export default PillButton;
