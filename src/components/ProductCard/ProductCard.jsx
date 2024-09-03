@@ -22,7 +22,7 @@ const ProductCard = ({product}) => {
           </ImageWrapper>
           <h3 style={{fontSize: "17px", fontWeight: "400"}}>{product.title}</h3>
           <p style={{fontSize: "20px", fontWeight: "700"}}>${product.price}</p>
-          <p style={{fontSize: "13px", fontWeight: "600"}}><StarIcon size={16} color={"#000000"} variant={"stroke"}/>{product.rating.rate} <span style={{fontSize: "11px", fontWeight: "400"}}>({product.rating.count})</span></p>
+          <p style={{fontSize: "13px", fontWeight: "700"}}><StarIcon size={16} color={"#000000"} variant={"stroke"}/>{product.rating.rate} <span style={{fontSize: "11px", fontWeight: "400"}}>({product.rating.count})</span></p>
         </FlexContainer>
         <PillButton onClick={handleClick}>ADD TO CART</PillButton>
       </FlexContainer>

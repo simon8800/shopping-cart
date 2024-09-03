@@ -7,18 +7,18 @@
 After some thinking, I've decided to start from the components to pages. This makes most sense to me currently...
 
 #### Deliverables
-- [ ] Page: ShoppingCart
-  - [ ] ProductTile
+- [X] Page: ShoppingCart
+  - [X] ProductTile
     - [X] Styling
-    - [ ] PillButton updates quantity of product in cart
-    - [ ] RemoveButton removes product from cart
+    - [X] PillButton updates quantity of product in cart
+    - [X] RemoveButton removes product from cart
     - [X] Subtotal displays price of product before tax
-- [ ] Page: Shop
-  - [ ] ProductCase
-  - [ ] ProductCard
+- [X] Page: Shop
+  - [X] ProductCase
+  - [X] ProductCard
     - [X] Styling
-- [ ] Page: Home
-- [ ] Component: NavBar
+- [X] Page: Home
+- [X] Component: NavBar
 
 ### First draft
 - Two pages: a home page and a shop page (which includes shopping cart)
