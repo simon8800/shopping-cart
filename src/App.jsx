@@ -3,12 +3,13 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 // components
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer';
 
 
 const PageWrapper = styled.div`
   background-color: white;
+  padding-bottom: 100px;
 `
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
           removeFromCart
         }}/>
       </PageWrapper>
+      <Footer></Footer>
     </div>
   )
 }
